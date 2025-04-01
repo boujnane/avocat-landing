@@ -1,38 +1,19 @@
 import Image from "next/image";
 import ServicesSection from "./components/ServicesSection";
+import Header from "./components/Header";
+
 
 export default function Home() {
   return (
-    <div className="min-h-screen font-sans text-gray-800">
-      {/* Header */}
-      <header className="bg-white shadow h-screen flex flex-col justify-center items-center">
-        {/* Logo Section */}
-        <div className="flex justify-center mb-4">
-          <Image
-            src="/logo_sangare_upscale.jpeg" // Remplace par le chemin de ton logo
-            alt="Logo de Maître Jean Dupont"
-            width={700} // Ajuste la taille selon ton logo
-            height={700}
-            className="object-contain"
-          />
-        </div>
-        
-        {/* Navbar */}
-        <nav className="space-x-6">
-          <a href="#services" className="text-gray-600 hover:text-blue-600 transition duration-300">
-            Services
-          </a>
-          <a href="#about" className="text-gray-600 hover:text-blue-600 transition duration-300">
-            À propos
-          </a>
-          <a href="#testimonials" className="text-gray-600 hover:text-blue-600 transition duration-300">
-            Témoignages
-          </a>
-          <a href="#contact" className="text-gray-600 hover:text-blue-600 transition duration-300">
-            Contact
-          </a>
-        </nav>
-      </header>
+<div className="min-h-screen font-sans text-gray-800">
+  
+  {/* Header */}
+  <div
+  id="particles-js"
+  className="absolute inset-0 w-full h-full"
+  style={{ zIndex: 0, backgroundColor: "rgba(255,0,0,0.2)" }}
+></div>
+  <Header/>
 
 {/* Hero Section */}
 <section className="bg-gradient-to-r from-[#013a7b] to-[#014ead] text-white py-20">
@@ -107,7 +88,7 @@ export default function Home() {
   <div className="container mx-auto px-6">
     <h2 className="text-4xl font-bold text-center mb-12">Contact</h2>
     <div className="max-w-lg mx-auto">
-      <form className="bg-white p-8 rounded-lg shadow-lg">
+      <form action="https://formspree.io/f/xanepwvo" method="POST"  className="bg-white p-8 rounded-lg shadow-lg">
         <div className="mb-4">
           <label htmlFor="name" className="block text-gray-800 font-semibold mb-2">
             Nom
@@ -115,8 +96,10 @@ export default function Home() {
           <input
             type="text"
             id="name"
-            className="w-full border border-gray-300 p-3 rounded"
+            name="name"
+            className="w-full border border-gray-300 p-3 rounded text-black"
             placeholder="Votre nom"
+            required
           />
         </div>
         <div className="mb-4">
@@ -126,8 +109,10 @@ export default function Home() {
           <input
             type="email"
             id="email"
-            className="w-full border border-gray-300 p-3 rounded"
+            name="email"
+            className="w-full border border-gray-300 p-3 rounded text-black"
             placeholder="Votre email"
+            required
           />
         </div>
         <div className="mb-4">
@@ -136,9 +121,11 @@ export default function Home() {
           </label>
           <textarea
             id="message"
-            className="w-full border border-gray-300 p-3 rounded"
+            name="message"
+            className="w-full border border-gray-300 p-3 rounded text-black"
             rows={5}
             placeholder="Votre message"
+            required
           ></textarea>
         </div>
         <button
@@ -155,7 +142,7 @@ export default function Home() {
 {/* Footer */}
 <footer className="bg-gray-200 py-6">
   <div className="container mx-auto px-6 text-center text-gray-700">
-    <p>&copy; {new Date().getFullYear()} Maître Jean Dupont. Tous droits réservés.</p>
+    <p>&copy; {new Date().getFullYear()} Maître Joël Sangaré. Tous droits réservés.</p>
   </div>
 </footer>
     </div>
