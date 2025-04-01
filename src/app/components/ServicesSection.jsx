@@ -45,11 +45,11 @@ const ServicesSection = () => {
           Nos Services
         </h2>
         <div className="flex justify-center mb-10">
-          <div className="flex space-x-6">
+          <div className="flex flex-wrap justify-center space-x-6 md:space-x-10">
             {Object.keys(services).map((key) => (
               <button
                 key={key}
-                className="text-lg text-[#014ead] font-semibold py-3 px-6 transition-all duration-300 transform hover:scale-105 hover:bg-[#014ead] hover:text-white rounded-lg shadow-lg"
+                className="text-lg text-[#014ead] font-semibold py-3 px-6 mb-4 md:mb-0 transition-all duration-300 transform hover:scale-105 hover:bg-[#014ead] hover:text-white rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-[#014ead]"
                 onClick={() => setActiveService(key)}
               >
                 {services[key].title}

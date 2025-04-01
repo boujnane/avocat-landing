@@ -18,23 +18,24 @@ const Header = () => {
       </div>
 
       {/* Navbar */}
-      <nav className="space-x-6 relative z-10">
-      <a href="#services" className="text-gray-600 hover:text-blue-600 transition duration-300">
-        Services 
+      <nav className="flex justify-center items-center !space-x-4 relative z-10">
+        <a href="#services" className="text-gray-600 hover:text-blue-600 transition duration-300">
+            Services
         </a>
         <span>&#8226;</span>
         <a href="#about" className="text-gray-600 hover:text-blue-600 transition duration-300">
-        À propos
+            À propos
         </a>
         <span>&#8226;</span>
         <a href="#testimonials" className="text-gray-600 hover:text-blue-600 transition duration-300">
-        Témoignages
+            Témoignages
         </a>
         <span>&#8226;</span>
         <a href="#contact" className="text-gray-600 hover:text-blue-600 transition duration-300">
-        Contact
+            Contact
         </a>
-      </nav>
+    </nav>
+
     </header>
   );
 };
